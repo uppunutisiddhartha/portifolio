@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #123b46;
+  font-family: Arial, sans-serif;
+}
+nav {
+  background-color: #123b46;
+
+  margin-left: 20px;
+  margin-top: 30px;
+  line-height: 35px;
+  margin-right: 100px;
+  display: flex;
+}
+.nav-item {
+  color: rgb(245, 240, 240);
+}
+.nav-link {
+  color: #f6f6f6;
+  display: flex;
+  text-decoration: none;
+  text-decoration: solid;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: rgb(0, 3, 8) !important;
+}
+.btn {
+      color: white;
+      background-color: #123b46;
+      border-radius: 55px;
+      padding: 5px 15px;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-right: 10px;
+      inline-size: auto;
+      font-weight: bold;
+      box-shadow: 0 0 6px #0fc4ec;
+    }
+    .btn:hover {
+      background-color: #0b3d46;
+      color: white;
+      border: none immediately;
+    }
+    i {
+      color: rgb(66, 92, 66);
+      font-size: bold;
+      margin-left: -2px;
+      animation: bounce 1.5s infinite;
+      transition: transform 0.3s ease;
+      margin-right: 5px;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+    .icons i {
+      color: #0fc4ec;
+      margin-left: 10px;
+      font-size: 27px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      animation: none;
+      margin-right: 1px;
+      box-shadow: 0px 0px 105px #0fc4ec;
+      border-radius: 15px;
+      transition: color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .icons i:hover {
+      color: #0fc4ec;
+      box-shadow: 0px 0px 95px #0fc4ec;
+      transform: scale(1.1);
+      padding: auto;
+    }
+    
+
+    B {
+      font-size: 38px;
+      margin-left: 40px;
+      color: white !important;
+      border: none !important;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      animation: nav 2s ease-in-out;
+    }
+    B span {
+      color: #0fc4ec;
+    }
+    .container{
+      margin-top: 20px;
+      justify-content: center;
+      margin-left: 120px;
+      
+    }
+    .pic img{
+      width: 220px;
+      height: 220px;
+      margin-left: 170px;
+      margin-top: 10px;
+     position: absolute;
+     border-radius: 20px;
+     display: flex;
+    }
+    .whoiam{
+      color: aliceblue;
+      margin-left: 400px;
+      border: solid 1px black !important;;
+      padding: 20px;
+      box-shadow: 0px 0px 10px #0fc4ec;
+      border-radius: 10px;
+      animation: fadeUp 1.3s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+    
+    
+    .whoiam h2{
+      color:white !important;
+      text-decoration: none;
+      font-weight: bold !important;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-indent: 10px;
+    }
+    .education{
+      color: white !important;
+      margin-left: 170px;
+      border: #000000 solid 1px;
+     width: 470px;
+      padding: 30px;
+      margin-top: 18px;
+      height: 300px;
+      box-shadow: 0px 0px 10px #0fc4ec;
+      border-radius: 10px;
+    
+    }
+    .education h3{
+      color: #e6f3f5;
+      font-size: 20px;
+      margin-top: 10px;
+      display: flex;
+    }
+    .education p{
+      color: #e5f1f4;
+      font-size: 13px;
+      padding:-20px;
+    }
+    .skill{
+      color: white!important;
+      margin-left: 660px;
+    position: absolute;
+    top: 370px;
+      border: #000000 solid 1px;
+      width: 500px;
+      padding: 30px;
+      margin-top:20px;
+      height: 300px;
+      box-shadow: 0px 0px 10px #0fc4ec;
+      border-radius: 10px;
+      width: 450px;
+     
+    }
+    .education,
+  .skill {
+    animation: slideIn 1.5s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <b>Who<span>I'Am</span></b>
+    </a>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="skills.html">SKILLS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">CONTACT</a>
+      </li>
+      .
+      <li class="nav-item">
+        <a class="btn btn-primary" href="resume.html"
+          ><i class="fas fa-download"></i> Download Resume</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="pic">
+      <img src="demo.png" alt="">
+    </div>
+    <div class="whoiam">
+      <h1>Hello, I'm</h1>
+      <h2>Siddhartha Uppunuti</h2>
+      <p>
+        I'm a self-taught web developer with a passion for user experience and creative design. I recently graduated from the prestigious University of Texas at Austin with a Bachelor's degree in Computer Science. My work experience includes working on various projects, including web applications, mobile apps, and digital marketing campaigns.
+      </p>
+    </div>
+    <div class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <h3>AVN Institute of Engineering and Technology</h3>
+          <p>Bachelor's Degree in Computer Science and Engineering, 2020 - 2024</p>
+      
+        </li>
+        <li>
+          <h3>Sri Venkateshwara Junior College, Karimnagar</h3>
+          <p>Intermediate (MPC - Math, Physics, Chemistry), 2017 - 2019</p>
+      
+        </li>
+        <li>
+          <h3>Zilla Parishad High School, Rajanna Sircilla</h3>
+          <p>Matriculation (10th Standard), 2016 - 2017</p>
+          
+        </li>
+      </ul>
+    </div>
+    <div class="skill">
+     
+        <h2>Skills</h2>
+        <ul>
+          <li>Python Full Stack Development</li>
+          <li>HTML, CSS</li>
+          <li>Django Framework</li>
+          <li>React.js</li>
+          <li>JavaScript</li>
+          <li>Web API Development</li>
+          <li>Machine Learning (Autism Detection Project)</li>
+          <li>Database Management (SQL, SQLite)</li>
+          <li>Problem-Solving and Debugging</li>
+        </ul>
+  
+      
+    </div>
+    
+     
+  </div>
+
+
+  
+</body>
+</html>

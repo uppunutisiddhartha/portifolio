@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #0b3d46;
+        color: #f2f2f2;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      nav {
+        position: sticky;
+        background-color: #123b46;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        margin-right: 70px;
+        margin-left: 40px;
+      }
+
+      nav a.navbar-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #f2f2f2;
+        font-weight: bold;
+        font-size: 1.5em;
+        position: sticky;
+      }
+
+      ul.nav {
+        display: flex;
+        list-style: none;
+        position: sticky;
+      }
+
+      .nav-item {
+        margin-left: 20px;
+        position: sticky;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-weight: bold;
+        transition: all 0.5s ease;
+      }
+
+      .nav-link:hover {
+        color: black;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100vh;
+        margin: 0px;
+        margin-left: 270px;
+        display: block;
+        background-color: #123b46;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        object-fit: contain;
+        animation: fadeIn 2s ease-in-out;
+        display: none;
+      }
+
+      .thank-you-message {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 50px;
+        color: #f2f2f2;
+        display: none;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .countdown {
+        font-size: 2em;
+        color: #f2f2f2;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .download-btn {
+        background-color: #014f58;
+        color: #f2f2f2;
+        padding: 15px 30px;
+        border: none;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s, opacity 1s ease-in-out;
+      }
+
+      .download-btn:hover {
+        background-color: #123b46;
+      }
+
+      /* Button fade-out animation */
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @media (min-width: 769px) {
+        nav {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .nav-link {
+          font-size: 1em;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+
+        iframe {
+          width: 70%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        ul.nav {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 15px;
+        }
+
+        .nav-item {
+          margin: 10px 0;
+        }
+      }
+
+      b {
+        color: white;
+        font-size: 38px;
+        margin-left: 40px;
+        color: white !important;
+        border: none !important;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      b span {
+        color: #0fc4ec;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">
+        <b>Thank<span>You</span></b>
+      </a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="skills.html">SKILLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="button-container">
+      <button class="download-btn" id="downloadBtn">View Resume</button>
+    </div>
+
+    <div class="thank-you-message" id="thankYouMessage">
+      Thank you for visiting my resume!
+      <div class="countdown" id="countdownTimer"></div>
+    </div>
+
+    <iframe
+      id="resumeIframe"
+      src="uppunuti siddhartha.pdf"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+    <script>
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          // Show the thank you message and start the countdown
+          document.getElementById("thankYouMessage").style.display = "block";
+          let countdownTime = 2;
+
+          let countdownInterval = setInterval(function () {
+            document.getElementById(
+              "countdownTimer"
+            ).textContent = `Resume will open in: ${countdownTime} seconds`;
+            countdownTime--;
+            if (countdownTime < 0) {
+              clearInterval(countdownInterval);
+              document.getElementById("thankYouMessage").style.display = "none";
+              document.getElementById("resumeIframe").style.display = "block";
+              document.getElementById("downloadBtn").style.animation = "fadeOut 1s forwards"; // Apply fade-out animation
+              setTimeout(function () {
+                document.getElementById("downloadBtn").style.display = "none"; // Hide the button after fade-out
+              }, 1000); // Match the time duration of the animation
+            }
+          }, 1000);
+
+          // Initially hide the resume iframe
+          document.getElementById("resumeIframe").style.display = "none";
+        });
+    </script>
+  </body>
+</html>

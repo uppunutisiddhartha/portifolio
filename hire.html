@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #123b46;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; 
+        }
+        nav {
+      background-color: #123b46;
+      color: #f71717;
+      margin-left: 20px;
+      margin-top: 30px;
+      line-height: 35px;
+      margin-right: 100px;
+      display: flex;
+    }
+        .nav-item {
+            color: rgb(245, 240, 240);
+        }
+        .nav-link {
+            color: #f6f6f6;
+            display: flex;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: color 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-link:hover {
+            color: rgb(0, 3, 8) !important;
+        }
+        B {
+            font-size: 38px;
+            color: white !important;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 40px;
+            padding-top: 20px;
+        }
+        B span {
+            color: #0fc4ec;
+        }
+
+        .hire-me-header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 10px;
+        }
+        
+        .hire-me-header p {
+            font-size: 18px;
+            color: white;
+            margin-top: -10px;
+            text-transform: capitalize;
+            text-shadow: 0px 0px 20px  #0077b5;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .btn {
+      color: white;
+      background-color: #123b46;
+      border-radius: 55px;
+      padding: 5px 15px;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-right: 10px;
+      inline-size: auto;
+      font-weight: bold;
+      box-shadow: 0 0 6px #0fc4ec;
+    }
+    .btn:hover {
+      background-color: #0b3d46;
+      color: white;
+      border: none immediately;
+    }
+    i {
+      color: rgb(66, 92, 66);
+      font-size: bold;
+      margin-left: -2px;
+      animation: bounce 1.5s infinite;
+      transition: transform 0.3s ease;
+      margin-right: 5px;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 40px 20px;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .service-card {
+            background-color: #0b3d46;
+            border: 1px solid #0fc4ec;
+            border-radius: 8px;
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite;
+        }
+        .service-card h3 {
+            color: #0fc4ec;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 16px;
+            color: white;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-button.linkedin {
+            background-color: #0077b5;
+        }
+
+        .social-button.whatsapp {
+            background-color: #25d366; 
+        }
+
+        .social-button.email {
+            background-color: #d44638; 
+        }
+
+        .social-button.github {
+            background-color: #333; 
+        }
+
+        .social-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-button i {
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hire-me-header h1 {
+                font-size: 30px;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+            <B>Hire<span>ME</span></B>
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="skills.html">SKILLS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-primary" href="resume.html"
+                  ><i class="fas fa-download"></i> Download Resume</a
+                >
+              </li>
+        </ul>
+    </nav>
+    
+    <div class="hire-me-header">
+        <p>Looking for a reliable and skilled Python Full Stack Developer? Let’s work together to bring your vision to life!</p>
+    </div>
+
+    <div class="services">
+        <div class="service-card">
+            <h3>Python Full Stack Development</h3>
+            <p>I build reliable and scalable web applications using Python, Django, and React.js to create smooth and seamless user experiences.</p>
+        </div>
+        <div class="service-card">
+            <h3>Backend Development</h3>
+            <p>I create server-side solutions using Python, Django, and RESTful APIs, making sure everything works smoothly with databases and the front-end.</p>
+        </div>
+        <div class="service-card">
+            <h3>Frontend Development</h3>
+            <p>I build user-friendly and interactive interfaces using React.js, HTML, CSS, and JavaScript to create great experiences for users.</p>
+        </div>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/siddhartha55" target="_blank" class="social-button linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://wa.me/9030425546?text=Hello%20Siddhartha%20!" target="_blank" title="Hello Siddhartha Uppunuti" class="social-button whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:your-email@example.com" target="_blank" class="social-button email">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/your-username" target="_blank" class="social-button github">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
